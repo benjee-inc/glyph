@@ -33,16 +33,25 @@
     for(var j=0;j<els.length;j++)io.observe(els[j]);
   }else{for(var j2=0;j2<els.length;j2++)els[j2].classList.add('in');}
 
-  // waitlist stub: localStorage + mailto
+  // waitlist: POST /api/waitlist (Postgres on the server)
   var f=document.getElementById('wl'),m=document.getElementById('wl-msg');
-  var KEY='glyph_waitlist',TO='fantasticfauna@mail.grokbot.com';
+  var KEY='glyph_waitlist';
   try{if(localStorage.getItem(KEY)){m.textContent="You're on the list.";m.className='note ok';}}catch(e){}
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var val=(f.email.value||'').trim();
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)){m.textContent='That email looks off. Try again.';m.className='note';return;}
-    try{localStorage.setItem(KEY,val);}catch(e){}
-    m.textContent="You're on the list. Your mail app opens so you can send it.";m.className='note ok';
-    location.href='mailto:'+TO+'?subject='+encodeURIComponent('Glyph waitlist')+'&body='+encodeURIComponent('Add me to the Glyph list: '+val);
+    var btn=f.querySelector('button');if(btn)btn.disabled=true;
+    m.textContent='Adding you...';m.className='note';
+    fetch('/api/waitlist',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:val})})
+      .then(function(r){
+        if(r.ok||r.status===409){
+          try{localStorage.setItem(KEY,val);}catch(e){}
+          m.textContent="You're on the list.";m.className='note ok';f.reset();
+        }else if(r.status===400){m.textContent='That email looks off. Try again.';m.className='note';}
+        else{m.textContent='Something broke on our end. Try again in a minute.';m.className='note';}
+      })
+      .catch(function(){m.textContent='Could not reach the server. Try again.';m.className='note';})
+      .then(function(){if(btn)btn.disabled=false;});
   });
 })();
