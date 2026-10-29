@@ -1,0 +1,234 @@
+{
+  "model": "gpt-4.1-2025-04-14",
+  "rounds": [
+    {
+      "request": {
+        "model": "gpt-4.1",
+        "temperature": 0.6,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "You write copy for a product landing page. Voice rules (hard):\n- No em dashes or en dashes anywhere. Use periods.\n- Banned words: leverage, seamless, seamlessly, unlock, unleash, empower, elevate, revolutionize, game-changer, effortless, next-level, cutting-edge, robust, supercharge, journey, world-class, peace of mind.\n- No triple-adjective slogans. No \"Not just X, but Y\". No \"Say goodbye to\". No rhetorical \"Imagine...\" openers. No exclamation marks.\n- Short sentences. Everyday words. Specific and opinionated. Quiet confidence.\n- Cadence: deliberate storytelling like MrBallen or a film narrator. Short concrete beats. Film lower-third caption energy.\n- Do NOT invent price, ship date, reviews, ratings, testimonials, press quotes, App Store or Google Play links, certifications, or numbers not given.\nOutput strict JSON only."
+          },
+          {
+            "role": "user",
+            "content": "Product facts (only use these):\n- Glyph is a purple frosted torus (a donut shape), about 82 mm across and 31 mm tall. It is a passkey / security key you hold.\n- No battery. It is powered by the phone's NFC when you tap.\n- On iPhone you touch it to the phone's top edge. It glows purple while it signs you in. Then you are signed in.\n- Passwords can be phished. A passkey on Glyph can't be typed into a fake site. Fake sites get nothing.\n- Standalone: lives on your desk, in a pocket, on a keyring. MagSafe magnets are optional carry, not required.\n- Dock: a puck with a peg that goes through the donut hole, for your laptop.\n- Inside: NFC antenna, FIDO2 chip and LEDs, glow coil, light guide, magnets.\n- Works with iPhone NFC security keys and passkeys.\n- Tagline idea from the founder: \"Ledger for the normal world.\" (Ledger is the hardware crypto wallet.)\n- Status: pre-launch. Waitlist only. Signup currently opens your email app.\n\nThe page plays the product film as the hero. The film has 6 beats in order:\n1 hero: the donut alone in a black void, slowly turning\n2 standalone: donut resting on a desk next to a phone in a stand\n3 tap: donut lowered onto the phone's top edge, glows, lock ring fills, \"Signed in\"\n4 set down: donut set back on the desk\n5 dock: donut drops onto a dock puck with a cable\n6 inside: exploded view of the parts\n(7 end: donut glowing alone)\n\nReturn JSON with these keys:\n{\n \"title\": \"<= 45 chars, format 'Glyph: ...'\",\n \"meta_description\": \"<= 150 chars\",\n \"og_description\": \"<= 90 chars\",\n \"hero_caption\": {\"title\": \"ALL CAPS, <= 4 words\", \"sub\": \"<= 9 words\"},\n \"film_captions\": [ {\"beat\": \"hero|standalone|tap|setdown|dock|inside|end\", \"title\": \"ALL CAPS <= 4 words\", \"sub\": \"<= 8 words\"} x7 ],\n \"story_lines\": [\"3 to 5 very short narrator lines that tell the problem and the turn. Each <= 10 words. Like a film voiceover. Concrete. Example vibe: 'Your password is a sentence a stranger can copy.'\"],\n \"beats\": [ {\"title\": \"ALL CAPS <= 4 words\", \"sub\": \"<= 12 words\"} x3 max: how it works / no battery / phishing ],\n \"gallery_captions\": [\"4 short still captions, ALL CAPS <= 3 words each, for: three-quarter view, macro surface, top view, side view\"],\n \"specs_title\": \"ALL CAPS <= 3 words\",\n \"specs\": [ {\"label\": \"...\", \"value\": \"...\"} x4 to 5, from facts only ],\n \"waitlist_headline\": \"ALL CAPS <= 5 words\",\n \"waitlist_sub\": \"<= 16 words, honest that it's not out yet\",\n \"waitlist_button\": \"<= 3 words\",\n \"waitlist_success\": \"<= 14 words, mention email app opens\",\n \"waitlist_error\": \"<= 8 words\",\n \"email_placeholder\": \"short\",\n \"scroll_hint\": \"<= 3 words\",\n \"sound_toggle\": \"<= 2 words\",\n \"footer_line\": \"<= 8 words\"\n}"
+          }
+        ]
+      },
+      "response": {
+        "title": "Glyph: Hold Your Passkey",
+        "meta_description": "Glyph is a purple donut-shaped security key. NFC powered. No battery. Phishing protection. Join the waitlist.",
+        "og_description": "A frosted purple passkey. No battery. No passwords. Just tap to sign in.",
+        "hero_caption": {
+          "title": "PASSKEY IN HAND",
+          "sub": "Purple donut, turning in the dark"
+        },
+        "film_captions": [
+          {
+            "beat": "hero",
+            "title": "IN THE VOID",
+            "sub": "Glyph turns, purple and calm"
+          },
+          {
+            "beat": "standalone",
+            "title": "RESTS EASY",
+            "sub": "On your desk or in a pocket"
+          },
+          {
+            "beat": "tap",
+            "title": "TAP TO SIGN",
+            "sub": "Touch to phone. It glows. You're in."
+          },
+          {
+            "beat": "setdown",
+            "title": "BACK TO DESK",
+            "sub": "Set down. Ready for next time."
+          },
+          {
+            "beat": "dock",
+            "title": "DOCKED",
+            "sub": "Drops onto the puck for your laptop"
+          },
+          {
+            "beat": "inside",
+            "title": "SEE INSIDE",
+            "sub": "NFC, FIDO2, LEDs, magnets, light guide"
+          },
+          {
+            "beat": "end",
+            "title": "STILL GLOWING",
+            "sub": "Glyph alone, lit in purple"
+          }
+        ],
+        "story_lines": [
+          "Passwords are easy to steal.",
+          "Fake sites trick you. Glyph does not talk to them.",
+          "Tap. Purple glow. You are signed in."
+        ],
+        "beats": [
+          {
+            "title": "NO BATTERY",
+            "sub": "NFC from your phone powers it"
+          },
+          {
+            "title": "PHISHING BLOCKED",
+            "sub": "Fake sites get nothing from Glyph"
+          },
+          {
+            "title": "TAP TO SIGN",
+            "sub": "Just touch to your phone"
+          }
+        ],
+        "gallery_captions": [
+          "THREE-QUARTER VIEW",
+          "MACRO SURFACE",
+          "TOP VIEW",
+          "SIDE VIEW"
+        ],
+        "specs_title": "KEY SPECS",
+        "specs": [
+          {
+            "label": "Shape",
+            "value": "Purple frosted torus"
+          },
+          {
+            "label": "Size",
+            "value": "82 mm wide, 31 mm tall"
+          },
+          {
+            "label": "Power",
+            "value": "NFC only, no battery"
+          },
+          {
+            "label": "Core",
+            "value": "FIDO2 chip, LEDs, magnets"
+          },
+          {
+            "label": "Dock",
+            "value": "Puck with peg for laptops"
+          }
+        ],
+        "waitlist_headline": "JOIN THE WAITLIST",
+        "waitlist_sub": "Glyph is not out yet. Signup opens your email app.",
+        "waitlist_button": "Join Waitlist",
+        "waitlist_success": "Check your email app to finish signup.",
+        "waitlist_error": "Try again",
+        "email_placeholder": "your email",
+        "scroll_hint": "Scroll down",
+        "sound_toggle": "Sound on",
+        "footer_line": "Glyph is pre-launch"
+      }
+    },
+    {
+      "request_followup": "Round 2. Too flat and too literal. Fix:\n- Captions must tell the viewer a product truth, not describe the shot. Bad: \"IN THE VOID / Glyph turns, purple and calm\". Good (from the actual film): \"TAP THE PHONE'S TOP EDGE / It glows while it signs you in\", \"SET IT DOWN / Done. Nothing to charge.\", \"GLYPH / A passkey you hold. No battery.\"\n- Hero caption is the one big line on the page. Make it a claim someone remembers. Heavy, short, ALL CAPS. Sub is the plain how.\n- story_lines: make it a tiny story with a turn, 4 lines, narrator voice. Line 1 sets the problem in a concrete everyday image. Last line lands on Glyph. No cliches like \"easy to steal\".\n- beats: 3 max, each must be specific (top edge, no battery, fake site). Subs are full plain sentences.\n- Gallery captions: trailer still feel, not camera angle names. 2-3 words ALL CAPS.\n- Waitlist: quiet, honest. Button 2 words, not \"Join Waitlist\".\n- footer_line: use or sharpen the founder line \"Ledger for the normal world.\"\n- Specs: plain language.\n- Keep every hard rule. Same JSON keys. JSON only.",
+      "response": {
+        "title": "Glyph: Hold the Real Key",
+        "meta_description": "A purple donut you tap to sign in. No battery. Blocks fake sites. Pre-launch. Waitlist open.",
+        "og_description": "A passkey you hold. No passwords. No battery. Only works for you.",
+        "hero_caption": {
+          "title": "HOLD WHAT'S REAL",
+          "sub": "Tap the donut to your phone to sign in"
+        },
+        "film_captions": [
+          {
+            "beat": "hero",
+            "title": "GLYPH",
+            "sub": "A passkey you hold. No battery."
+          },
+          {
+            "beat": "standalone",
+            "title": "IT STAYS PUT",
+            "sub": "On your desk or your keyring."
+          },
+          {
+            "beat": "tap",
+            "title": "TAP THE PHONE'S TOP EDGE",
+            "sub": "It glows while it signs you in."
+          },
+          {
+            "beat": "setdown",
+            "title": "SET IT DOWN",
+            "sub": "Done. Nothing to charge."
+          },
+          {
+            "beat": "dock",
+            "title": "LIVES ON YOUR DESK",
+            "sub": "Dock it by your laptop. Always ready."
+          },
+          {
+            "beat": "inside",
+            "title": "NO PASSWORDS INSIDE",
+            "sub": "NFC antenna. FIDO2 chip. Light. Magnets."
+          },
+          {
+            "beat": "end",
+            "title": "ONLY SIGNS REAL SITES",
+            "sub": "Fake sites get nothing from Glyph."
+          }
+        ],
+        "story_lines": [
+          "You check your phone at the cafe table.",
+          "Login screen. You type a password. Anyone could.",
+          "A fake site looks just like the real one.",
+          "Glyph glows. Only the real site works."
+        ],
+        "beats": [
+          {
+            "title": "TOP EDGE TAP",
+            "sub": "Touch Glyph to your phone’s top edge to sign in."
+          },
+          {
+            "title": "NO BATTERY",
+            "sub": "It uses your phone’s NFC. No charging. Ever."
+          },
+          {
+            "title": "BLOCKS FAKE SITES",
+            "sub": "Glyph does not work on lookalike sites. They get nothing."
+          }
+        ],
+        "gallery_captions": [
+          "HOLDS YOUR PASSKEY",
+          "PURPLE FROSTED FINISH",
+          "ONLY WORKS FOR YOU",
+          "NO BATTERY EVER"
+        ],
+        "specs_title": "KEY DETAILS",
+        "specs": [
+          {
+            "label": "Shape",
+            "value": "Purple donut, frosted finish"
+          },
+          {
+            "label": "Size",
+            "value": "82 mm wide, 31 mm tall"
+          },
+          {
+            "label": "Power",
+            "value": "No battery. NFC from your phone."
+          },
+          {
+            "label": "What’s inside",
+            "value": "FIDO2 chip, NFC antenna, LEDs, magnets"
+          },
+          {
+            "label": "Dock",
+            "value": "Puck with peg for laptop use"
+          }
+        ],
+        "waitlist_headline": "WAITLIST IS OPEN",
+        "waitlist_sub": "Glyph is not for sale yet. Email signup opens your app.",
+        "waitlist_button": "Get Updates",
+        "waitlist_success": "Email app opens to finish signup.",
+        "waitlist_error": "Could not submit",
+        "email_placeholder": "email",
+        "scroll_hint": "Keep scrolling",
+        "sound_toggle": "Toggle sound",
+        "footer_line": "Ledger for the normal world."
+      }
+    }
+  ]
+}

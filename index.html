@@ -3,88 +3,106 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Glyph — MagSafe passkey</title>
-<meta name="description" content="Glyph is a MagSafe passkey. One tap. No passwords to steal.">
+<title>Glyph: a passkey you hold</title>
+<meta name="description" content="Glyph is a purple passkey you hold. Tap it to your iPhone's top edge to sign in. No battery. Waitlist open.">
 <meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="canonical" href="https://getglyph.up.railway.app/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://glyph-site-production.up.railway.app/">
-<link rel="canonical" href="https://glyph-site-production.up.railway.app/">
-<meta property="og:title" content="Glyph — MagSafe passkey">
-<meta property="og:description" content="One tap. No passwords to steal.">
-<meta property="og:image" content="https://glyph-site-production.up.railway.app/assets/og.jpg">
+<meta property="og:url" content="https://getglyph.up.railway.app/">
+<meta property="og:title" content="Glyph: a passkey you hold">
+<meta property="og:description" content="A passkey you hold. No passwords. No battery.">
+<meta property="og:image" content="https://getglyph.up.railway.app/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Glyph — MagSafe passkey">
-<meta name="twitter:description" content="One tap. No passwords to steal.">
-<meta name="twitter:image" content="https://glyph-site-production.up.railway.app/assets/og.jpg">
-<link rel="stylesheet" href="/style.css">
+<meta name="twitter:title" content="Glyph: a passkey you hold">
+<meta name="twitter:description" content="A passkey you hold. No passwords. No battery.">
+<meta name="twitter:image" content="https://getglyph.up.railway.app/assets/og.jpg">
+<link rel="preload" href="/assets/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=2">
 </head>
 <body>
-<header class="top"><span class="mark">Glyph</span></header>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="top">
+  <span class="mark">GLYPH</span>
+  <a class="toplink" href="#list">Waitlist</a>
+</header>
 
 <main>
-  <section class="hero">
-    <h1>Glyph</h1>
-    <p class="lede">MagSafe passkey. One tap. No passwords to steal.</p>
-    <picture class="hero-img">
+  <section class="film" aria-label="Glyph product film">
+    <div class="screen">
+      <video id="film" src="/assets/film.mp4" poster="/assets/film-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Glyph is tapped to a phone's top edge, glows, and signs in"></video>
+      <div class="lt lt-film" id="filmcap" aria-live="off">
+        <span class="lt-t">GLYPH</span>
+        <span class="lt-s">A passkey you hold. No battery.</span>
+      </div>
+      <button class="sound" id="sound" type="button" aria-pressed="false">Sound on</button>
+    </div>
+  </section>
+
+  <section class="title">
+    <div class="glow" aria-hidden="true"></div>
+    <h1>A PASSKEY<br>YOU HOLD</h1>
+    <p class="sub">Touch it to your phone's top edge. It glows while it signs you in.</p>
+    <a class="cta" href="#list">Get on the list</a>
+  </section>
+
+  <section class="story" aria-label="Why Glyph">
+    <p class="line">You check your phone at the cafe table.</p>
+    <p class="line">Login screen. You type a password. Anyone could.</p>
+    <p class="line">A fake site looks just like the real one.</p>
+    <p class="line last">Glyph glows. Only the real site works.</p>
+  </section>
+
+  <section class="still hero-still">
+    <picture>
       <source srcset="/assets/hero.webp" type="image/webp">
-      <img src="/assets/hero.jpg" width="1600" height="1000" alt="Glyph, a purple torus passkey, glowing on a black background">
+      <img src="/assets/hero.jpg" width="1600" height="1000" loading="lazy" alt="Glyph, a frosted purple donut, glowing in the dark">
     </picture>
-    <a class="btn" href="#list">Get on the list</a>
   </section>
 
-  <section class="beats">
-    <div class="beat">
-      <h2>Tap to unlock</h2>
-      <p>Touch Glyph to your phone. It glows. You're in.</p>
-    </div>
-    <div class="beat">
-      <h2>Lives on your phone or desk</h2>
-      <p>Snap it on with MagSafe, or leave it on your desk. It works either way.</p>
-    </div>
-    <div class="beat">
-      <h2>No password to phish</h2>
-      <p>There's nothing to type, so there's nothing to steal. Fake sites get nothing.</p>
-    </div>
+  <section class="beats" aria-label="How it works">
+    <div class="lt reveal"><span class="lt-t">TOP EDGE TAP</span><span class="lt-s">Touch Glyph to your phone's top edge to sign in.</span></div>
+    <div class="lt reveal"><span class="lt-t">NO BATTERY</span><span class="lt-s">It runs on your phone's NFC. Nothing to charge. Ever.</span></div>
+    <div class="lt reveal"><span class="lt-t">BLOCKS FAKE SITES</span><span class="lt-s">Glyph won't sign in to a lookalike site. They get nothing.</span></div>
   </section>
 
-  <section class="clip">
-    <video src="/assets/in-use.mp4" poster="/assets/in-use-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  <section class="stills" aria-label="Stills from the film">
+    <figure class="wide"><picture><source srcset="/assets/s-signed.webp" type="image/webp"><img src="/assets/s-signed.jpg" width="1280" height="720" loading="lazy" alt="Glyph glowing on a phone's top edge while it signs in"></picture><figcaption>SIGNED IN</figcaption></figure>
+    <figure><picture><source srcset="/assets/s-desk.webp" type="image/webp"><img src="/assets/s-desk.jpg" width="1280" height="720" loading="lazy" alt="Glyph resting on a desk next to a phone in a stand"></picture><figcaption>ON YOUR DESK</figcaption></figure>
+    <figure><picture><source srcset="/assets/s-dock.webp" type="image/webp"><img src="/assets/s-dock.jpg" width="1280" height="720" loading="lazy" alt="Glyph sitting on its dock with a cable"></picture><figcaption>BY YOUR LAPTOP</figcaption></figure>
+    <figure><picture><source srcset="/assets/s-inside.webp" type="image/webp"><img src="/assets/s-inside.jpg" width="1280" height="720" loading="lazy" alt="Glyph's parts pulled apart: antenna, chip, coil, magnets"></picture><figcaption>NO BATTERY INSIDE</figcaption></figure>
   </section>
 
-  <section class="gallery">
-    <picture><source srcset="/assets/threeq.webp" type="image/webp"><img src="/assets/threeq.jpg" loading="lazy" alt="Glyph from a three-quarter angle, glowing"></picture>
-    <picture><source srcset="/assets/macro.webp" type="image/webp"><img src="/assets/macro.jpg" loading="lazy" alt="Close up of Glyph's frosted purple surface"></picture>
-    <picture><source srcset="/assets/top.webp" type="image/webp"><img src="/assets/top.jpg" loading="lazy" alt="Glyph from above"></picture>
-    <picture class="wide"><source srcset="/assets/side.webp" type="image/webp"><img src="/assets/side.jpg" loading="lazy" alt="Glyph from the side"></picture>
-  </section>
-
-  <section class="specs">
-    <h2>The basics</h2>
-    <ul>
-      <li><span>Size</span><span>About 82 mm across, 31 mm tall</span></li>
-      <li><span>Works with</span><span>iPhone NFC security keys and passkeys</span></li>
-      <li><span>Carry</span><span>MagSafe snap-on, or stand-alone</span></li>
-      <li><span>Finish</span><span>Frosted purple. Glows when you sign in.</span></li>
-    </ul>
+  <section class="specs" aria-label="Details">
+    <div class="lt"><span class="lt-t">KEY DETAILS</span></div>
+    <dl>
+      <div><dt>Size</dt><dd>82 mm wide, 31 mm tall</dd></div>
+      <div><dt>Power</dt><dd>No battery. NFC from your phone.</dd></div>
+      <div><dt>Works with</dt><dd>iPhone passkeys and NFC security keys</dd></div>
+      <div><dt>Carry</dt><dd>Desk, pocket, keyring. MagSafe optional.</dd></div>
+      <div><dt>Dock</dt><dd>Puck with a peg, for your laptop</dd></div>
+      <div><dt>Inside</dt><dd>FIDO2 chip, NFC antenna, LEDs, magnets</dd></div>
+    </dl>
   </section>
 
   <section class="list" id="list">
-    <h2>Coming soon</h2>
-    <p>Want one? Leave your email and we'll tell you when Glyph is ready.</p>
+    <div class="glow small" aria-hidden="true"></div>
+    <div class="lt"><span class="lt-t">WAITLIST IS OPEN</span><span class="lt-s">Glyph is not for sale yet. Leave your email and we'll tell you when it is.</span></div>
     <form id="wl" novalidate>
-      <input type="email" name="email" placeholder="you@email.com" autocomplete="email" required aria-label="Email">
-      <button type="submit">Notify me</button>
+      <input type="email" name="email" placeholder="your email" autocomplete="email" required aria-label="Email">
+      <button type="submit">Get updates</button>
     </form>
     <p class="note" id="wl-msg" role="status"></p>
   </section>
 </main>
 
-<footer><span>Glyph</span><span>Ledger for the normal world.</span></footer>
-<script src="/app.js"></script>
+<footer><span>GLYPH</span><span>Ledger for the normal world.</span></footer>
+<script src="/app.js?v=2"></script>
 </body>
 </html>
