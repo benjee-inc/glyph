@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Glyph: a passkey you hold</title>
-<meta name="description" content="Glyph is a purple passkey you hold. Tap it to your iPhone's top edge to sign in. No battery. Waitlist open.">
+<title>Glyph: keep your accounts yours</title>
+<meta name="description" content="Passwords leak. Text codes get stolen. Fake sites look real. Glyph is a hardware key you hold, so your accounts stay yours. Waitlist open.">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -13,17 +13,17 @@
 <link rel="canonical" href="https://getglyph.up.railway.app/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://getglyph.up.railway.app/">
-<meta property="og:title" content="Glyph: a passkey you hold">
-<meta property="og:description" content="A passkey you hold. No passwords. No battery.">
+<meta property="og:title" content="Glyph: keep your accounts yours">
+<meta property="og:description" content="Passwords leak. Fake sites look real. Glyph is the key you hold, so your accounts stay yours.">
 <meta property="og:image" content="https://getglyph.up.railway.app/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Glyph: a passkey you hold">
-<meta name="twitter:description" content="A passkey you hold. No passwords. No battery.">
+<meta name="twitter:title" content="Glyph: keep your accounts yours">
+<meta name="twitter:description" content="Passwords leak. Fake sites look real. Glyph is the key you hold, so your accounts stay yours.">
 <meta name="twitter:image" content="https://getglyph.up.railway.app/assets/og.jpg">
 <link rel="preload" href="/assets/inter.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=2">
+<link rel="stylesheet" href="/style.css?v=3">
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
@@ -36,10 +36,10 @@
 <main>
   <section class="film" aria-label="Glyph product film">
     <div class="screen">
-      <video id="film" src="/assets/film.mp4" poster="/assets/film-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Glyph is tapped to a phone's top edge, glows, and signs in"></video>
+      <video id="film" src="/assets/film.mp4" poster="/assets/film-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Glyph, a purple key you hold, is tapped to a phone's top edge and glows"></video>
       <div class="lt lt-film" id="filmcap" aria-live="off">
         <span class="lt-t">GLYPH</span>
-        <span class="lt-s">A passkey you hold. No battery.</span>
+        <span class="lt-s">The key to your accounts. You hold it.</span>
       </div>
       <button class="sound" id="sound" type="button" aria-pressed="false">Sound on</button>
     </div>
@@ -47,16 +47,29 @@
 
   <section class="title">
     <div class="glow" aria-hidden="true"></div>
-    <h1>A PASSKEY<br>YOU HOLD</h1>
-    <p class="sub">Touch it to your phone's top edge. It glows while it signs you in.</p>
+    <h1>THEY ALREADY HAVE YOUR PASSWORD</h1>
+    <p class="sub">Glyph is the key that keeps your accounts yours. Your email. Your bank. Even after the password leaks.</p>
     <a class="cta" href="#list">Get on the list</a>
   </section>
 
-  <section class="story" aria-label="Why Glyph">
-    <p class="line">You check your phone at the cafe table.</p>
-    <p class="line">Login screen. You type a password. Anyone could.</p>
-    <p class="line">A fake site looks just like the real one.</p>
-    <p class="line last">Glyph glows. Only the real site works.</p>
+  <section class="problem" aria-label="The problem">
+    <div class="lt"><span class="lt-t">YOUR ACCOUNTS ARE WIDE OPEN</span></div>
+    <p class="line">Your email shows up in a breach. Your password sits in a file someone is selling.</p>
+    <p class="line">You used the same one at the bank. Now they have that too.</p>
+    <p class="line">A text says your package is stuck. The link looks real. You type your login.</p>
+    <p class="line">Someone moves your number to their SIM. Your bank's text code goes to them.</p>
+    <p class="line">At the cafe, anyone can type what you type.</p>
+    <p class="line hit">A password only proves someone knows it. Not that it's you.</p>
+  </section>
+
+  <section class="solution" aria-label="The fix">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="lt"><span class="lt-t">THE FIX</span></div>
+    <h2>HOLD THE KEY</h2>
+    <p class="sol">Glyph is a key you hold, like a house key for your accounts. There is nothing to type, so there is nothing to steal.</p>
+    <p class="sol">It only talks to the real site. A fake one gets nothing, no matter how real it looks.</p>
+    <p class="sol">Signing in is just the moment you use it. The job is keeping your accounts yours.</p>
+    <p class="ledger">Crypto people keep their coins on a key they hold. Glyph does that for the rest of your life online.</p>
   </section>
 
   <section class="still hero-still">
@@ -67,9 +80,10 @@
   </section>
 
   <section class="beats" aria-label="How it works">
-    <div class="lt reveal"><span class="lt-t">TOP EDGE TAP</span><span class="lt-s">Touch Glyph to your phone's top edge to sign in.</span></div>
-    <div class="lt reveal"><span class="lt-t">NO BATTERY</span><span class="lt-s">It runs on your phone's NFC. Nothing to charge. Ever.</span></div>
-    <div class="lt reveal"><span class="lt-t">BLOCKS FAKE SITES</span><span class="lt-s">Glyph won't sign in to a lookalike site. They get nothing.</span></div>
+    <div class="lt-kicker">HOW IT WORKS</div>
+    <div class="lt reveal"><span class="lt-t">TAP THE TOP EDGE</span><span class="lt-s">Touch Glyph to your iPhone's top edge. It glows purple while it checks the site.</span></div>
+    <div class="lt reveal"><span class="lt-t">NO BATTERY</span><span class="lt-s">Your phone powers it over NFC. Nothing to charge.</span></div>
+    <div class="lt reveal"><span class="lt-t">FAKE SITES GET NOTHING</span><span class="lt-s">It answers only the real site you set it up with.</span></div>
   </section>
 
   <section class="stills" aria-label="Stills from the film">
@@ -84,7 +98,7 @@
     <dl>
       <div><dt>Size</dt><dd>82 mm wide, 31 mm tall</dd></div>
       <div><dt>Power</dt><dd>No battery. NFC from your phone.</dd></div>
-      <div><dt>Works with</dt><dd>iPhone passkeys and NFC security keys</dd></div>
+      <div><dt>Works with</dt><dd>Passkeys (FIDO2) and sites that take NFC security keys</dd></div>
       <div><dt>Carry</dt><dd>Desk, pocket, keyring. MagSafe optional.</dd></div>
       <div><dt>Dock</dt><dd>Puck with a peg, for your laptop</dd></div>
       <div><dt>Inside</dt><dd>FIDO2 chip, NFC antenna, LEDs, magnets</dd></div>
@@ -93,16 +107,16 @@
 
   <section class="list" id="list">
     <div class="glow small" aria-hidden="true"></div>
-    <div class="lt"><span class="lt-t">WAITLIST IS OPEN</span><span class="lt-s">Glyph is not for sale yet. Leave your email and we'll tell you when it is.</span></div>
+    <div class="lt"><span class="lt-t">GET ON THE LIST</span><span class="lt-s">Glyph is not for sale yet. Leave your email and we'll tell you when it is.</span></div>
     <form id="wl" novalidate>
       <input type="email" name="email" placeholder="your email" autocomplete="email" required aria-label="Email">
-      <button type="submit">Get updates</button>
+      <button type="submit">Join the list</button>
     </form>
     <p class="note" id="wl-msg" role="status"></p>
   </section>
 </main>
 
 <footer><span>GLYPH</span><span>Ledger for the normal world.</span></footer>
-<script src="/app.js?v=2"></script>
+<script src="/app.js?v=3"></script>
 </body>
 </html>

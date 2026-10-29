@@ -1,0 +1,59 @@
+{
+  "model": "gpt-4.1-2025-04-14",
+  "request": {
+    "model": "gpt-4.1",
+    "temperature": 0.7,
+    "response_format": {
+      "type": "json_object"
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You write copy for a product landing page. Voice rules (hard):\n- No em dashes or en dashes anywhere. Use periods.\n- Banned words: leverage, seamless, seamlessly, unlock, unleash, empower, elevate, revolutionize, game-changer, effortless, next-level, cutting-edge, robust, supercharge, journey, world-class, peace of mind, imagine.\n- No triple slogans. No \"Not just X but Y\" or \"more than a\". No \"Say goodbye to\". No \"Imagine\" openers. No exclamation marks.\n- Short sentences. Everyday words. Concrete scenes. Quiet confidence. Film lower-third caption energy.\n- Do NOT invent stats, breach numbers, price, ship date, reviews, testimonials, press, certifications.\nOutput strict JSON only."
+      },
+      {
+        "role": "user",
+        "content": "Product facts (only use these):\n- Glyph is a purple frosted torus (donut shape), 82 mm across, 31 mm tall. A hardware security key / passkey you hold. FIDO2 chip inside.\n- No battery. Powered by the phone's NFC when you tap. On iPhone you touch it to the top edge. It glows purple while it signs you in.\n- It only answers the real website it was set up with. A lookalike (phishing) site gets nothing. There is no password to type, steal, or phish.\n- Works with passkeys and sites that support NFC security keys. MagSafe optional. Desk dock for laptop.\n- Not for sale yet. Waitlist only. Positioning: \"Ledger for the normal world.\" You hold the key to your digital life.\n\nTask: The founder asked \"Is this just a login product?\" Answer: No. It is a hardware key that keeps your accounts yours when passwords, SMS codes, and lookalike sites fail. Login is the moment you use it. The product is protection.\n\nWrite copy that sells the PROBLEM hard first, then the SOLUTION.\n- hero_h1: ALL CAPS, max 6 words, answers \"why should I care\", not \"what shape is it\". Directions to riff on: YOUR PASSWORD IS A LOAN / THEY ALREADY HAVE YOUR PASSWORD / ANYONE CAN TYPE WHAT YOU TYPE.\n- hero_sub: 1-2 short sentences. Glyph is the key that keeps your accounts yours.\n- problem_headline: ALL CAPS caption title.\n- problem_lines: 5 short concrete lines that make the reader feel exposed. Scenes: cafe wifi, a bank login, your email, a breach dumping passwords, a fake site that looks real, an SMS code someone else gets (SIM swap). Present tense, second person.\n- solution_headline: ALL CAPS. solution_sub: 2-3 short sentences. Glyph is the key you hold. Only the real site works. Nothing to type. Nothing to phish. Make clear it is the key to your accounts, not a login widget.\n- proof_beats: 3 items, each {title (ALL CAPS, 2-4 words), line (one sentence)}: top edge tap, no battery, refuses fake sites.\n- waitlist_title (ALL CAPS), waitlist_sub, waitlist_button (2-3 words), footer, cta_button (2-4 words), title (page <title>), meta (description, under 155 chars).\nGive 2 alternates for hero_h1 in hero_h1_alts."
+      }
+    ]
+  },
+  "response": {
+    "hero_h1": "THEY ALREADY HAVE YOUR PASSWORD",
+    "hero_h1_alts": [
+      "ANYONE CAN TYPE WHAT YOU TYPE",
+      "YOUR PASSWORD IS A LOAN"
+    ],
+    "hero_sub": "Glyph is the key that keeps your accounts yours. No password to steal, nothing to phish.",
+    "problem_headline": "YOUR ACCOUNTS ARE OPEN",
+    "problem_lines": [
+      "You connect to cafe wifi. Someone watches your login.",
+      "Your bank asks for a password. Your old one leaked last year.",
+      "Your email gets hit in a breach. Your info lands in a file online.",
+      "A site looks just like your favorite shop. But it\u2019s a fake.",
+      "Your SMS code shows up on someone else\u2019s phone."
+    ],
+    "solution_headline": "ONLY YOU HOLD THE KEY",
+    "solution_sub": "Glyph is the key you hold. Only the real site can use it. Nothing to type. Nothing to phish. Your accounts stay yours.",
+    "proof_beats": [
+      {
+        "title": "TAP THE TOP",
+        "line": "Touch Glyph to your phone\u2019s top edge. It glows as it signs you in."
+      },
+      {
+        "title": "NO CHARGING NEEDED",
+        "line": "Works with just a tap. No battery inside."
+      },
+      {
+        "title": "BLOCKS FAKE SITES",
+        "line": "Glyph only answers the real site you set up. Fakes get nothing."
+      }
+    ],
+    "waitlist_title": "WAITLIST NOW OPEN",
+    "waitlist_sub": "Glyph is not for sale yet. Get early access updates.",
+    "waitlist_button": "Join Waitlist",
+    "footer": "You hold the key to your digital life.",
+    "cta_button": "Get Early Access",
+    "title": "Glyph: The Key to Your Accounts",
+    "meta": "Glyph is a hardware key that makes your accounts yours. No passwords. No phishing. Only you hold the key."
+  }
+}

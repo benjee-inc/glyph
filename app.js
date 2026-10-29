@@ -1,7 +1,7 @@
 (function(){
   // film captions synced to the video timeline (seconds)
   var CAPS=[
-    [0.6,4.7,"GLYPH","A passkey you hold. No battery."],
+    [0.6,4.7,"GLYPH","The key to your accounts. You hold it."],
     [4.9,8.2,"IT STAYS PUT","On your desk, in a pocket, on a keyring."],
     [8.7,12.4,"TAP THE PHONE'S TOP EDGE","It glows while it signs you in."],
     [13.0,15.6,"SET IT DOWN","Done. Nothing to charge."],
@@ -26,7 +26,7 @@
   if(b)b.addEventListener('click',function(){v.muted=!v.muted;if(!v.muted){v.volume=.8;v.play();}b.setAttribute('aria-pressed',String(!v.muted));b.textContent=v.muted?'Sound on':'Sound off';});
 
   // slow reveal on scroll
-  var els=document.querySelectorAll('.story .line,.beats .lt,.stills figure');
+  var els=document.querySelectorAll('.problem .line,.solution .sol,.beats .lt,.stills figure');
   for(var i=0;i<els.length;i++)els[i].classList.add('reveal');
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -12% 0px'});
