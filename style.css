@@ -117,5 +117,4 @@ h1{font-size:clamp(38px,10vw,80px);line-height:1}
 .solution .glow{top:45%}
 .solution h2{margin-top:22px;font-weight:700;font-size:clamp(44px,12vw,92px);line-height:.98;letter-spacing:.04em;text-shadow:0 0 50px rgba(176,120,255,.55)}
 .sol{margin-top:22px;font-size:clamp(19px,5vw,24px);line-height:1.4;color:#ece8f4;max-width:30ch}
-.ledger{margin-top:34px;padding-top:20px;border-top:1px solid var(--hair);font-size:16px;color:var(--dim);max-width:36ch}
 .lt-kicker{font-weight:600;font-size:12px;letter-spacing:.24em;color:var(--dim)}
