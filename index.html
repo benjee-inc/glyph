@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Glyph — MagSafe passkey</title>
+<meta name="description" content="Glyph is a MagSafe passkey. One tap. No passwords to steal.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Glyph — MagSafe passkey">
+<meta property="og:description" content="One tap. No passwords to steal.">
+<meta property="og:image" content="/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Glyph — MagSafe passkey">
+<meta name="twitter:description" content="One tap. No passwords to steal.">
+<meta name="twitter:image" content="/assets/og.jpg">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top"><span class="mark">Glyph</span></header>
+
+<main>
+  <section class="hero">
+    <h1>Glyph</h1>
+    <p class="lede">MagSafe passkey. One tap. No passwords to steal.</p>
+    <picture class="hero-img">
+      <source srcset="/assets/hero.webp" type="image/webp">
+      <img src="/assets/hero.jpg" width="1600" height="1000" alt="Glyph, a purple torus passkey, glowing on a black background">
+    </picture>
+    <a class="btn" href="#list">Get on the list</a>
+  </section>
+
+  <section class="beats">
+    <div class="beat">
+      <h2>Tap to unlock</h2>
+      <p>Touch Glyph to your phone. It glows. You're in.</p>
+    </div>
+    <div class="beat">
+      <h2>Lives on your phone or desk</h2>
+      <p>Snap it on with MagSafe, or leave it on your desk. It works either way.</p>
+    </div>
+    <div class="beat">
+      <h2>No password to phish</h2>
+      <p>There's nothing to type, so there's nothing to steal. Fake sites get nothing.</p>
+    </div>
+  </section>
+
+  <section class="clip">
+    <video src="/assets/in-use.mp4" poster="/assets/in-use-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  </section>
+
+  <section class="gallery">
+    <picture><source srcset="/assets/threeq.webp" type="image/webp"><img src="/assets/threeq.jpg" loading="lazy" alt="Glyph from a three-quarter angle, glowing"></picture>
+    <picture><source srcset="/assets/macro.webp" type="image/webp"><img src="/assets/macro.jpg" loading="lazy" alt="Close up of Glyph's frosted purple surface"></picture>
+    <picture><source srcset="/assets/side.webp" type="image/webp"><img src="/assets/side.jpg" loading="lazy" alt="Glyph from the side"></picture>
+    <picture><source srcset="/assets/top.webp" type="image/webp"><img src="/assets/top.jpg" loading="lazy" alt="Glyph from above"></picture>
+  </section>
+
+  <section class="specs">
+    <h2>The basics</h2>
+    <ul>
+      <li><span>Size</span><span>About 82 mm across, 31 mm tall</span></li>
+      <li><span>Works with</span><span>iPhone NFC security keys and passkeys</span></li>
+      <li><span>Carry</span><span>MagSafe snap-on, or stand-alone</span></li>
+      <li><span>Finish</span><span>Frosted purple. Glows when you sign in.</span></li>
+    </ul>
+  </section>
+
+  <section class="list" id="list">
+    <h2>Coming soon</h2>
+    <p>Want one? Leave your email and we'll tell you when Glyph is ready.</p>
+    <form id="wl" novalidate>
+      <input type="email" name="email" placeholder="you@email.com" autocomplete="email" required aria-label="Email">
+      <button type="submit">Notify me</button>
+    </form>
+    <p class="note" id="wl-msg" role="status"></p>
+  </section>
+</main>
+
+<footer><span>Glyph</span><span>Ledger for the normal world.</span></footer>
+<script src="/app.js"></script>
+</body>
+</html>
