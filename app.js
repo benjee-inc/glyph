@@ -7,7 +7,7 @@
     [13.0,15.6,"SET IT DOWN","Done. Nothing to charge."],
     [15.9,20.2,"LIVES ON YOUR DESK","Drop it on the dock by your laptop."],
     [20.5,26.8,"NO PASSWORDS INSIDE","NFC antenna. FIDO2 chip. Light. Magnets."],
-    [27.3,31.2,"ONLY SIGNS REAL SITES","Fake sites get nothing from Glyph."]
+    [27.3,31.2,"ONLY SIGNS REAL SITES","If you tap on a fake page, Glyph does not sign you in."]
   ];
   var v=document.getElementById('film'),cap=document.getElementById('filmcap');
   var t=cap.querySelector('.lt-t'),s=cap.querySelector('.lt-s'),cur=-1;

@@ -1,0 +1,70 @@
+{
+ "model": "gpt-4.1-2025-04-14",
+ "request": {
+  "model": "gpt-4.1",
+  "temperature": 0.4,
+  "response_format": {
+   "type": "json_object"
+  },
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are a blunt copy editor removing AI slop from a product landing page. Product facts (do not change or add to them): Glyph is a small purple donut-shaped hardware security key (FIDO2 passkey). No battery; the phone powers it over NFC when you tap it to the iPhone's top edge. It glows purple while it checks. It only answers the real site it was set up with, so phishing sites get nothing. Works with passkeys and sites that take NFC security keys. Sits on a desk, pocket, keyring, optional MagSafe, a dock for the laptop. Not for sale yet; waitlist only.\nRules:\n- Remove ALL crypto, coin, wallet, Ledger, blockchain references. Zero crypto anywhere. The footer tagline must be replaced with a non-crypto line.\n- No em dashes or en dashes. No semicolons.\n- Banned words: leverage, seamless, unlock, empower, peace of mind, revolutionary, game-changer, elevate, effortless, secure your digital life, robust, cutting-edge.\n- No triple slogans (three-beat lists like 'Simple. Safe. Yours.'). No 'Not just X, but Y' or 'It's not X, it's Y' constructions.\n- Short sentences. Everyday words a 12-year-old knows. Sound like a person, not marketing.\n- Keep PROBLEM then SOLUTION structure. Problem sells the real threat (breaches, reused passwords, fake links, SIM swaps, shoulder surfing). Solution says why holding Glyph fixes it.\n- Do not invent stats, prices, ship dates, reviews, or features.\n- Headlines and kickers stay ALL CAPS and short (film-caption style, under 6 words). Keep the same number of problem lines (5-6), solution lines (2-3), and how_it_works items (3).\n- The owner called this beat slop: title \"FAKE SITES GET NOTHING\" / \"It answers only the real site you set it up with.\" Rewrite it as concrete, human copy, e.g. describe the actual moment: a lookalike link like a fake bank page, you tap Glyph, and it will not sign in because the address is not the real one. The title should read like a plain caption, not a marketing slogan. Same for any \"fake sites get nothing\" phrasing elsewhere (solution lines, last film caption): say it concretely, do not repeat the slogan.\nReturn JSON with exactly the same keys and shapes as the input, plus a key \"notes\" with one short line on what you changed."
+   },
+   {
+    "role": "user",
+    "content": "Deslop this page copy. Input JSON:\n{\n \"title_h1\": \"THEY ALREADY HAVE YOUR PASSWORD\",\n \"title_sub\": \"Glyph is the key that keeps your accounts yours. Your email. Your bank. Even after the password leaks.\",\n \"cta\": \"Get on the list\",\n \"film_caption_first\": [\n  \"GLYPH\",\n  \"The key to your accounts. You hold it.\"\n ],\n \"problem_kicker\": \"YOUR ACCOUNTS ARE WIDE OPEN\",\n \"problem_lines\": [\n  \"Your email shows up in a breach. Your password sits in a file someone is selling.\",\n  \"You used the same one at the bank. Now they have that too.\",\n  \"A text says your package is stuck. The link looks real. You type your login.\",\n  \"Someone moves your number to their SIM. Your bank's text code goes to them.\",\n  \"At the cafe, anyone can type what you type.\",\n  \"A password only proves someone knows it. Not that it's you.\"\n ],\n \"solution_kicker\": \"THE FIX\",\n \"solution_h2\": \"HOLD THE KEY\",\n \"solution_lines\": [\n  \"Glyph is a key you hold, like a house key for your accounts. There is nothing to type, so there is nothing to steal.\",\n  \"It only talks to the real site. A fake one gets nothing, no matter how real it looks.\",\n  \"Signing in is just the moment you use it. The job is keeping your accounts yours.\",\n  \"Crypto people keep their coins on a key they hold. Glyph does that for the rest of your life online.\"\n ],\n \"film_caption_last\": [\n  \"ONLY SIGNS REAL SITES\",\n  \"Fake sites get nothing from Glyph.\"\n ],\n \"how_it_works\": [\n  [\n   \"TAP THE TOP EDGE\",\n   \"Touch Glyph to your iPhone's top edge. It glows purple while it checks the site.\"\n  ],\n  [\n   \"NO BATTERY\",\n   \"Your phone powers it over NFC. Nothing to charge.\"\n  ],\n  [\n   \"FAKE SITES GET NOTHING\",\n   \"It answers only the real site you set it up with.\"\n  ]\n ],\n \"waitlist_title\": \"GET ON THE LIST\",\n \"waitlist_sub\": \"Glyph is not for sale yet. Leave your email and we'll tell you when it is.\",\n \"waitlist_button\": \"Join the list\",\n \"footer_tagline\": \"Ledger for the normal world.\",\n \"meta_description\": \"Passwords leak. Text codes get stolen. Fake sites look real. Glyph is a hardware key you hold, so your accounts stay yours. Waitlist open.\"\n}"
+   }
+  ]
+ },
+ "response_raw": "{\n \"title_h1\": \"THEY ALREADY HAVE YOUR PASSWORD\",\n \"title_sub\": \"Glyph is the key that keeps your accounts yours. Your email. Your bank. Even after the password leaks.\",\n \"cta\": \"Get on the list\",\n \"film_caption_first\": [\n  \"GLYPH\",\n  \"The key to your accounts. You hold it.\"\n ],\n \"problem_kicker\": \"YOUR ACCOUNTS ARE WIDE OPEN\",\n \"problem_lines\": [\n  \"Your email shows up in a breach. Your password sits in a file someone is selling.\",\n  \"You used the same one at the bank. Now they have that too.\",\n  \"A text says your package is stuck. The link looks real. You type your login.\",\n  \"Someone moves your number to their SIM. Your bank's text code goes to them.\",\n  \"At the cafe, anyone can type what you type.\",\n  \"A password only proves someone knows it. Not that it's you.\"\n ],\n \"solution_kicker\": \"THE FIX\",\n \"solution_h2\": \"HOLD THE KEY\",\n \"solution_lines\": [\n  \"Glyph is a key you hold, like a house key for your accounts. There is nothing to type, so there is nothing to steal.\",\n  \"It only answers when you visit the real site. If you tap on a fake bank page, Glyph will not sign you in.\",\n  \"Signing in is just the moment you use it. The job is keeping your accounts yours.\"\n ],\n \"film_caption_last\": [\n  \"ONLY SIGNS REAL SITES\",\n  \"If you tap on a fake page, Glyph does not sign you in.\"\n ],\n \"how_it_works\": [\n  [\n   \"TAP THE TOP EDGE\",\n   \"Touch Glyph to your iPhone's top edge. It glows purple while it checks the site.\"\n  ],\n  [\n   \"NO BATTERY\",\n   \"Your phone powers it over NFC. Nothing to charge.\"\n  ],\n  [\n   \"REAL SITE CHECK\",\n   \"If the web address is not the one you set up, Glyph will not sign you in.\"\n  ]\n ],\n \"waitlist_title\": \"GET ON THE LIST\",\n \"waitlist_sub\": \"Glyph is not for sale yet. Leave your email and we'll tell you when it is.\",\n \"waitlist_button\": \"Join the list\",\n \"footer_tagline\": \"A key for your accounts.\",\n \"meta_description\": \"Passwords leak. Text codes get stolen. Fake sites look real. Glyph is a hardware key you hold, so your accounts stay yours. Waitlist open.\",\n \"notes\": \"Removed crypto references and banned words, rewrote fake site lines to be concrete, changed footer tagline, kept facts unchanged.\"\n}",
+ "parsed": {
+  "title_h1": "THEY ALREADY HAVE YOUR PASSWORD",
+  "title_sub": "Glyph is the key that keeps your accounts yours. Your email. Your bank. Even after the password leaks.",
+  "cta": "Get on the list",
+  "film_caption_first": [
+   "GLYPH",
+   "The key to your accounts. You hold it."
+  ],
+  "problem_kicker": "YOUR ACCOUNTS ARE WIDE OPEN",
+  "problem_lines": [
+   "Your email shows up in a breach. Your password sits in a file someone is selling.",
+   "You used the same one at the bank. Now they have that too.",
+   "A text says your package is stuck. The link looks real. You type your login.",
+   "Someone moves your number to their SIM. Your bank's text code goes to them.",
+   "At the cafe, anyone can type what you type.",
+   "A password only proves someone knows it. Not that it's you."
+  ],
+  "solution_kicker": "THE FIX",
+  "solution_h2": "HOLD THE KEY",
+  "solution_lines": [
+   "Glyph is a key you hold, like a house key for your accounts. There is nothing to type, so there is nothing to steal.",
+   "It only answers when you visit the real site. If you tap on a fake bank page, Glyph will not sign you in.",
+   "Signing in is just the moment you use it. The job is keeping your accounts yours."
+  ],
+  "film_caption_last": [
+   "ONLY SIGNS REAL SITES",
+   "If you tap on a fake page, Glyph does not sign you in."
+  ],
+  "how_it_works": [
+   [
+    "TAP THE TOP EDGE",
+    "Touch Glyph to your iPhone's top edge. It glows purple while it checks the site."
+   ],
+   [
+    "NO BATTERY",
+    "Your phone powers it over NFC. Nothing to charge."
+   ],
+   [
+    "REAL SITE CHECK",
+    "If the web address is not the one you set up, Glyph will not sign you in."
+   ]
+  ],
+  "waitlist_title": "GET ON THE LIST",
+  "waitlist_sub": "Glyph is not for sale yet. Leave your email and we'll tell you when it is.",
+  "waitlist_button": "Join the list",
+  "footer_tagline": "A key for your accounts.",
+  "meta_description": "Passwords leak. Text codes get stolen. Fake sites look real. Glyph is a hardware key you hold, so your accounts stay yours. Waitlist open.",
+  "notes": "Removed crypto references and banned words, rewrote fake site lines to be concrete, changed footer tagline, kept facts unchanged."
+ }
+}
