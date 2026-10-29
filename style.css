@@ -18,7 +18,7 @@ h2{font-size:22px;letter-spacing:-.01em;margin-bottom:6px}
 .beat p,.list p,.specs span:last-child{color:var(--mute)}
 .clip{padding:30px 0 0}
 .clip video{border-radius:20px;border:1px solid var(--line);aspect-ratio:16/9;object-fit:cover;background:#000}
-.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:30px 0 0}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:30px 0 0}
 .gallery img{border-radius:16px;aspect-ratio:1/1;object-fit:cover;background:#111}
 .gallery .wide{grid-column:1/-1}.gallery .wide img{aspect-ratio:1920/900}
 .specs{padding:44px 0 0}
